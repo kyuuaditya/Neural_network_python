@@ -8,10 +8,10 @@ using namespace std;
 ofstream imagedata;
 ofstream imagedata2;
 
-const int HEIGHT = 800;
-const int WIDTH = 800;
-const int IMG_SIZE = 50;
-const int DATA_SIZE = 1000;
+const int HEIGHT = 400;
+const int WIDTH = 400;
+const int IMG_SIZE = 25;
+const int DATA_SIZE = 10000;
 
 void initializeImage(vector<vector<int>>& img) {
     for (int i = 0; i < IMG_SIZE; ++i) {
@@ -55,7 +55,7 @@ void normalizeAndWriteImage(const vector<vector<int>>& img,
 }
 
 void writeOutput(ofstream& imagedata2) {
-    imagedata2 << 0 << " " << 1 << " " << endl;
+    imagedata2 << 0 << " " << 1 << " " << 0 << " " << endl;
 }
 
 int main() {

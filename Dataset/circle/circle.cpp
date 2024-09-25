@@ -1,61 +1,3 @@
-// #include <bits/stdc++.h>
-// #include <stdio.h>
-
-// #include <fstream>
-// using namespace std;
-// ofstream imagedata;
-// ofstream imagedata2;
-
-// int main() {
-//     int data_size = 100;
-//     // cout << " yes" << endl;
-//     srand(time(0));
-//     int height = 800;
-//     int width = 800;
-//     int radius;
-//     int centrey = height / 2;
-//     int centrex = width / 2;
-//     int p;
-//     int q;
-//     int img2[50][50];
-//     for (int i = 0; i < 50; i++) {
-//         for (int j = 0; j < 50; j++) {
-//             img2[i][j] = 0;
-//         }
-//     }
-
-//     imagedata.open("input.txt");
-//     imagedata2.open("output.txt");
-
-//     for (int yo = 0; yo < data_size; yo++) {
-//         centrey = height / 2 + (rand() % (height / 5) + 1) - height / 10;
-//         centrex = width / 2 + (rand() % (height / 5) + 1) - height / 10;
-//         radius = (height / 5) + (rand() % (height / 5) + 1) - height / 10;
-
-//         for (int i = 0; i < width; i++) {
-//             for (int j = 0; j < height; j++) {
-//                 q = j / 16;
-//                 p = i / 16;
-//                 if ((double)((centrex - i) * (centrex - i) +
-//                              (centrey - j) * (centrey - j)) < radius *
-//                              radius) {
-//                     img2[p][q] += 255;
-//                 }
-//             }
-//         }
-//         for (int i = 0; i < 50; i++) {
-//             for (int j = 0; j < 50; j++) {
-//                 img2[j][i] = img2[j][i] / 256;
-//                 imagedata << img2[j][i] << " ";
-//             }
-//         }
-//         imagedata2 << 1 << " " << 0 << " ";
-//         imagedata << endl;
-//         imagedata2 << endl;
-//     }
-// }
-
-// #include <ctime>
 #include <fstream>
 #include <iostream>
 #include <random>
@@ -66,10 +8,10 @@ using namespace std;
 ofstream imagedata;
 ofstream imagedata2;
 
-const int HEIGHT = 800;
-const int WIDTH = 800;
-const int IMG_SIZE = 50;
-const int DATA_SIZE = 1000;
+const int HEIGHT = 400;
+const int WIDTH = 400;
+const int IMG_SIZE = 25;
+const int DATA_SIZE = 10000;
 
 void initializeImage(vector<vector<int>>& img) {
     for (int i = 0; i < IMG_SIZE; ++i) {
@@ -116,7 +58,7 @@ void normalizeAndWriteImage(const vector<vector<int>>& img,
 }
 
 void writeOutput(ofstream& imagedata2) {
-    imagedata2 << 1 << " " << 0 << " " << endl;
+    imagedata2 << 1 << " " << 0 << " " << 0 << " " << endl;
 }
 
 int main() {
