@@ -11,7 +11,7 @@ ofstream imagedata2;
 const int HEIGHT = 400;
 const int WIDTH = 400;
 const int IMG_SIZE = 25;
-const int DATA_SIZE = 10000;
+const int DATA_SIZE = 100;
 
 void initializeImage(vector<vector<int>>& img) {
     for (int i = 0; i < IMG_SIZE; ++i) {
